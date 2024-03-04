@@ -5,7 +5,7 @@ import {Component} from "@angular/core";
   selector: 'app-navbar',
   template: '<h1>Nav Bar</h1>',
   standalone: true,
-  styles:[`h1{color:blue; font-size: 25px}h1:hover{color:red;}`]
+  styles:[`h1{color:blue; font-size: 45px}h1:hover{color:red;cursor: pointer}`]
 
 })
 
