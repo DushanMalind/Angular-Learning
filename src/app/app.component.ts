@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import {MainComponent} from "./main/main.component";
 // @ts-ignore
 import {NavbarComponent} from "./navbar/navbar.component";
+import {HomeComponent} from "./home/home.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainComponent, NavbarComponent ],
+  imports: [RouterOutlet, MainComponent, NavbarComponent, HomeComponent],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
