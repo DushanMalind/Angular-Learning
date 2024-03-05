@@ -12,14 +12,14 @@
         <img  src="https://www.svgrepo.com/show/499831/target.svg" loading="lazy" style="color:transparent" width="32" height="32"></a>
     </div>
     <ul class="hidden items-center justify-center gap-6 md:flex">
-      <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
-        <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+      <li class="pt-1.5 font-dm text-sm font-medium text-slate-700 button">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page">Home</a>
       </li>
       <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
-        <a href="#">About</a>
+        <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" href="#">About</a>
       </li>
       <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
-        <a href="#">Contact</a>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" href="#">Contact</a>
       </li>
     </ul>
     <div class="flex-grow"></div>
