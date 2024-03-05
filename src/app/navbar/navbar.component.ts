@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-
+import {RouterLink, RouterLinkActive, Routes} from '@angular/router';
 
 /*@Component({
   selector: 'app-navbar',
@@ -13,8 +13,13 @@ import {Component} from "@angular/core";
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   standalone: true,
+  imports: [
+    RouterLink,
+    RouterLinkActive
+  ],
   styleUrls: ['./navbar.component.css']
 })
+
 
 export class NavbarComponent{
 title = 'My First Angular App';
