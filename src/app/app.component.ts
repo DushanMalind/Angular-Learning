@@ -15,6 +15,6 @@ import {PostComponent} from "./post/post.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'My First Angular App';
-  parentMessage = "message from parent";
+/*  title = 'My First Angular App';
+  parentMessage = "message from parent";*/
 }

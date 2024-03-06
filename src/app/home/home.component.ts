@@ -1,6 +1,6 @@
-import {Component, EventEmitter, OnChanges, OnDestroy, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {Input} from "postcss";
+
 
 @Component({
   selector: 'app-home',
@@ -12,6 +12,10 @@ import {Input} from "postcss";
   styleUrl: './home.component.css'
 })
 export class HomeComponent /*implements OnChanges*/{
+  parentMessage: string = 'Initial message Coming from parent';
+
+
+
   /** Emitting event data **/
  /* @Output() dataEmitter: EventEmitter<any> = new EventEmitter();
 
@@ -20,7 +24,7 @@ export class HomeComponent /*implements OnChanges*/{
     this.dataEmitter.emit(data);
   }*/
 
-  parentMessage: string = 'Initial message Coming from parent';
+
 
  /* constructor() {
     console.log('Constructor called');
@@ -68,6 +72,7 @@ export class HomeComponent /*implements OnChanges*/{
       console.log(`Is first ${inputName} change == ${inputValues.firstChange}`);
     }
   }*/
+
 }
 
 
