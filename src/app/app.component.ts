@@ -26,7 +26,13 @@ export class AppComponent {
     console.log('click');
   }
 
-  onkeyup(){
-    console.log('keyup');
+  onkeyup($event: any){
+    /*console.log($event);
+    console.log($event.target.value);*/
+    console.log($event.keyCode);
+
+    if ($event.keyCode === 13){
+      console.log('enter');
+    }
   }
 }
