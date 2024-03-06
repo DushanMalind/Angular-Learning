@@ -5,11 +5,12 @@ import {MainComponent} from "./main/main.component";
 import {NavbarComponent} from "./navbar/navbar.component";
 import {HomeComponent} from "./home/home.component";
 import {PostComponent} from "./post/post.component";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, PostComponent],
+  imports: [RouterOutlet, NavbarComponent, PostComponent, FormsModule],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -26,13 +27,31 @@ export class AppComponent {
     console.log('click');
   }
 
+/*
   onkeyup($event: any){
-    /*console.log($event);
-    console.log($event.target.value);*/
-    console.log($event.keyCode);
+    /!*console.log($event);
+    console.log($event.target.value);*!/
+
+    /!*console.log($event.keyCode);
 
     if ($event.keyCode === 13){
       console.log('enter');
-    }
+    }*!/
+
+    console.log("Enter Key Pressed");
   }
+*/
+
+
+
+ /* onkeyup(username: any){
+    console.log(username);
+  }*/
+
+  userName=String;
+
+  onkeyup(){
+    console.log(this.userName);
+  }
+
 }
