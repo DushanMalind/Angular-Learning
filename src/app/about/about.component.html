@@ -27,38 +27,39 @@
       <div class="flex flex-wrap -m-2">
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="name" class="leading-7 text-sm text-gray-600">Post Title</label>
-            <input  type="text" placeholder="Post Title" id="name" name="name" [(ngModel)]="postTitle"
+            <label for="post-title" class="leading-7 text-sm text-gray-600">Post Title</label>
+            <input  type="text" placeholder="Post Title" id="post-title" name="post-title" [(ngModel)]="postTitle"
                     class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-full">
           <div class="relative">
-            <label for="message" class="leading-7 text-sm text-gray-600">Post Content</label>
-            <textarea id="message" name="message" [(ngModel)]="postContent"
+            <label for="post-content" class="leading-7 text-sm text-gray-600">Post Content</label>
+            <textarea id="post-content" name="post-content" [(ngModel)]="postContent"
                       class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="image" class="leading-7 text-sm text-gray-600">Post Image Url</label>
-            <input type="text" id="image" name=""  [(ngModel)]="imageUrl"
+            <label for="post-image" class="leading-7 text-sm text-gray-600">Post Image Url</label>
+            <input type="text" id="post-image" name="post-image"  [(ngModel)]="imageUrl"
                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="url" class="leading-7 text-sm text-gray-600">Post Url</label>
-            <input type="text" id="url" name="" [(ngModel)]="postUrl"
+            <label for="post-link" class="leading-7 text-sm text-gray-600">Post Url</label>
+            <input type="text" id="post-link" name="post-link" [(ngModel)]="postUrl"
                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-full">
-          <input type="checkbox" [(ngModel)]="addBackground">Add Background
+          <input type="checkbox" [(ngModel)]="addBackground" >Add Background
       </div>
       </div>
         <div class="p-2 w-full">
-          <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+          <button (click)="onSubmit()"
+            class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
         </div>
 
       </div>
@@ -75,3 +76,16 @@
     <a [href]="postUrl" target="_blank" [style.display]="postUrl ? 'block' : 'none'">Read More</a>
   </div>
 </div>
+
+
+<div class="mx-auto flex flex-col text-center w-full mb-12">
+  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Post Form</h1>
+  <div class="post">
+    <h1 #postTitleElement class="text-red-600 font-bold text-6xl"></h1>
+    <p #postContentElement class="text-blue-700 text-3xl mt-8"></p>
+    <img #imageUrlElement class="mx-auto flex flex-col text-center w-48 mt-10 mb-12" alt="">
+    <a #postUrlElement target="_blank" [style.display]="postUrl ? 'block' : 'none'">Read More</a>
+  </div>
+</div>
+
+
