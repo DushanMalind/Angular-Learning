@@ -20,9 +20,9 @@ export class HomeComponent /*implements OnChanges*/{
     this.dataEmitter.emit(data);
   }*/
 
- /* message: string = 'Initial message';
+  parentMessage: string = 'Initial message Coming from parent';
 
-  constructor() {
+ /* constructor() {
     console.log('Constructor called');
   }
 
