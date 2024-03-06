@@ -368,6 +368,18 @@
 <!--Two way Data binding-->
 <input placeholder="type" class="mt-6 bg-green-500 px-8 py-4" type="text" [(ngModel)]="userName"  (keyup.enter)=" onkeyup()">
 
+<!--/////////////////////////////////////////////-->
+
+<br>
+<!--one way and two way Data Binding-->
+
+<input placeholder="type" class="mt-6 bg-yellow-200 px-8 py-4" [value]="textValue" (keyup.enter)="onkeyup()">
+
+<br>
+
+<!--two way Data Binding-->
+<input placeholder="type" class="mt-6 bg-yellow-200 px-8 py-4" [(ngModel)]="textValue"  (keyup.enter)="onkeyup()">
+
 <router-outlet></router-outlet>
 
 <!--<app-main></app-main>-->

@@ -50,8 +50,18 @@ export class AppComponent {
 
   userName=String;
 
+  /**
+   two way Data Bind
   onkeyup(){
     console.log(this.userName);
+  }
+ **/
+
+  textValue:string="Value is coming from components";
+
+  /*one way and two way Data bind*/
+  onkeyup(){
+    console.log(this.textValue);
   }
 
 }
