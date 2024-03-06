@@ -18,6 +18,7 @@ export class AboutComponent {
   @ViewChild('imageUrlElement') imageUrlElement: ElementRef | undefined;
   @ViewChild('postUrlElement') postUrlElement: ElementRef | undefined;
 
+  showForm: boolean = true;
   postTitle!: string;
   postContent!: string;
   imageUrl!: string;
@@ -39,6 +40,7 @@ export class AboutComponent {
     document.getElementById("post-image")!.setAttribute("src", this.imageUrl);
     document.getElementById("post-link")!.setAttribute("href", this.postUrl);*/
 
+
     // @ts-ignore
     this.postTitleElement.nativeElement.textContent = this.postTitle;
     // @ts-ignore
@@ -47,6 +49,9 @@ export class AboutComponent {
     this.imageUrlElement.nativeElement.setAttribute('src', this.imageUrl);
     // @ts-ignore
     this.postUrlElement.nativeElement.setAttribute('href', this.postUrl);
+
+    // Toggle showForm to switch between the form and post view
+    this.showForm = false;
 
     this.postTitle = '';
     this.postContent = '';

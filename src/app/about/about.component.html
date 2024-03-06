@@ -66,8 +66,8 @@
     </div>
 </section>
 
-
-<div class="  mx-auto flex flex-col text-center w-full mb-12">
+<div class="grid grid-cols-4 gap-4">
+<div class="  mx-auto  text-center w-full mb-12">
   <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Post Form</h1>
   <div class="post">
     <h1 class="text-red-600 font-bold text-6xl">{{ postTitle }}</h1>
@@ -78,8 +78,8 @@
 </div>
 
 
-<div class="mx-auto flex flex-col text-center w-full mb-12">
-  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Post Form</h1>
+<div class="mx-auto text-center w-full mb-12 ml-60">
+  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Post Form Button</h1>
   <div class="post">
     <h1 #postTitleElement class="text-red-600 font-bold text-6xl"></h1>
     <p #postContentElement class="text-blue-700 text-3xl mt-8"></p>
@@ -87,5 +87,25 @@
     <a #postUrlElement target="_blank" [style.display]="postUrl ? 'block' : 'none'">Read More</a>
   </div>
 </div>
+
+</div>
+
+
+
+
+<!--<div *ngIf="showForm" class="mx-auto flex flex-col text-center w-full mb-12">
+  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Post Form</h1>
+  &lt;!&ndash; Your form elements here &ndash;&gt;
+  &lt;!&ndash; Button for submitting the form &ndash;&gt;
+</div>
+
+<div *ngIf="!showForm" class="mx-auto flex flex-col text-center w-full mb-12">
+  <div class="post">
+    <h1 class="text-red-600 font-bold text-6xl">{{ postTitle }}</h1>
+    <p class="text-blue-700 text-3xl mt-8">{{ postContent }}</p>
+    <img *ngIf="imageUrl" class="mx-auto w-48 mt-10 mb-12" [src]="imageUrl" alt="Post Image">
+    <a *ngIf="postUrl" [href]="postUrl" target="_blank" class="text-indigo-500" [style.display]="postUrl ? 'block' : 'none'">Read More</a>
+  </div>
+</div>-->
 
 
