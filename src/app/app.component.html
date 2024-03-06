@@ -346,9 +346,26 @@
 
 <app-navbar></app-navbar>
 
+<p>{{ message }}</p>
+
+<img class="w-max" src="{{imgUrl}}">
+
+<img class="w-max"  [src]="imgUrl">
+
+<!--Event Filtering-->
+
+<button class="flex mt-4 text-white bg-blue-500 py-2 px-8 focus:outline-2 rounded"
+        (click)="onClick($event)">Click Me</button>
+
+
+<input placeholder="type" class="mt-6 bg-amber-300 px-8 py-4" type="text" (keyup)="onkeyup()">
+
+<router-outlet></router-outlet>
+
 <!--<app-main></app-main>-->
 
 <!--<app-home></app-home>-->
+
 
 <!--<app-post [fromParent]='parentMessage'></app-post>-->
 
