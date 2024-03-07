@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import {JsonPipe, NgForOf} from "@angular/common";
+import {JsonPipe, NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-event',
   standalone: true,
   imports: [
     NgForOf,
-    JsonPipe
+    JsonPipe,
+    NgIf
   ],
   templateUrl: './event.component.html',
   styleUrl: './event.component.css'

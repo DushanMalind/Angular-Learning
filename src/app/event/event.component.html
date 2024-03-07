@@ -55,3 +55,19 @@
 <!--Change DeTection-->
 
 <button (click)="addNew()" class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New Data</button>
+
+<br>
+
+<!--/////////////////////////// ngIF DirectIve ////////////////////////////////////-->
+
+<!--ngIF DirectIve-->
+
+<div *ngIf="objArray.length>0">
+  <h1 class="ml-6 text-3xl text-red-600">NgIF Use</h1>
+  <ul class="list-disc pl-6">
+    <li *ngFor="let post of objArray; let i=index"><!--{{ i }} - --> {{ post.id }} - {{ post.names }}
+      <button class="flex mx-auto text-white bg-red-500 py-2 px-2 focus:outline-2 rounded"
+              (click)="onDelete(i)">Delete</button>
+    </li>
+  </ul>
+</div>
