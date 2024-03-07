@@ -32,4 +32,14 @@ export class EventComponent {
       console.log(this.postArray[i]);
     }
   }
+
+  addNew(){
+    this.objArray.push({id:6,names:'Obj Post 6'});
+  }
+
+  onDelete(post:any){
+    /*this.objArray.splice(post,1);*/
+    let index = this.objArray.indexOf(post);
+    this.objArray.splice(index,1);
+  }
 }
