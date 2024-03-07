@@ -49,7 +49,6 @@ export class EventComponent {
 
   /*Delete Use post index number*/
   onDelete(index: number){
-    /*this.objArray.splice(post,1);*/
     /*let index = this.objArray.indexOf(post);*/
     this.objArray.splice(index,1);
   }
