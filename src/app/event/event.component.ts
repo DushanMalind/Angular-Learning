@@ -16,14 +16,14 @@ export class EventComponent {
   /*NgFor Directive*/
   postArray:Array<string>=['Post 1','Post 2','Post 3','Post 4','Post 5'];
 
-  /*Fetch Object Array*/
+  /*Fetch Object Array NgFor*/
 
-  objArray:Array<object>=[
-    {id:1,name:'Obj Post 1'},
-    {id:2,name:'Obj Post 2'},
-    {id:3,name:'Obj Post 3'},
-    {id:4,name:'Obj Post 4'},
-    {id:5,name:'Obj Post 5'}
+  objArray:Array<any>=[
+    {id:1,names:'Obj Post 1'},
+    {id:2,names:'Obj Post 2'},
+    {id:3,names:'Obj Post 3'},
+    {id:4,names:'Obj Post 4'},
+    {id:5,names:'Obj Post 5'}
   ];
 
 

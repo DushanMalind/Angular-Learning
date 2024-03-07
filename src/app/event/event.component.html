@@ -28,6 +28,15 @@
 <!--Fetch Object Array NgFor usage-->
 <h1 class="ml-6 text-3xl text-blue-700">Fetch Object Array</h1>
 
+<!--Only return Json object-->
 <ul class="list-disc pl-6">
   <li *ngFor="let post of objArray">{{ post | json }}</li>
+</ul>
+
+<br>
+
+<h1 class="ml-6 text-3xl text-green-600">Fetch Object Array Key Use</h1>
+<!--Only return Object Key Use-->
+<ul class="list-disc pl-6">
+  <li *ngFor="let post of objArray">{{ post.names }}</li>
 </ul>
