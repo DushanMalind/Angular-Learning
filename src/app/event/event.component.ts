@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './event.component.css'
 })
 export class EventComponent {
-
+  postArray:Array<string>=['Post 1','Post 2','Post 3','Post 4','Post 5'];
 }
