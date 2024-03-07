@@ -44,7 +44,8 @@
 <ul class="list-disc pl-6">
   <li *ngFor="let post of objArray; let i=index"><!--{{ i }} - --> {{ post.id }} - {{ post.names }}
     <button class="flex mx-auto text-white bg-red-500 py-2 px-2 focus:outline-2 rounded"
-            (click)="onDelete(i)">Delete</button>
+            (click)="onDelete(i)">Delete
+    </button>
   </li>
 </ul>
 <!--*************************************************************-->
@@ -54,7 +55,9 @@
 <!--*************************************************************-->
 <!--Change DeTection-->
 
-<button (click)="addNew()" class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New Data</button>
+<button (click)="addNew()" class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New
+  Data
+</button>
 
 <br>
 
@@ -67,7 +70,8 @@
   <ul class="list-disc pl-6">
     <li *ngFor="let post of objArray; let i=index"><!--{{ i }} - --> {{ post.id }} - {{ post.names }}
       <button class="flex mx-auto text-white bg-green-500 py-2 px-2 focus:outline-2 rounded"
-              (click)="onDelete(i)">Delete</button>
+              (click)="onDelete(i)">Delete
+      </button>
     </li>
   </ul>
 </div>
@@ -90,7 +94,8 @@
   <ul class="list-disc pl-6">
     <li *ngFor="let post of objArray; let i=index"><!--{{ i }} - --> {{ post.id }} - {{ post.names }}
       <button class="flex mx-auto text-white bg-blue-500 py-2 px-2 focus:outline-2 rounded"
-              (click)="onDelete(i)">Delete</button>
+              (click)="onDelete(i)">Delete
+      </button>
     </li>
   </ul>
 </div>
@@ -109,12 +114,35 @@
 <h1 class="ml-6 text-4xl text-fuchsia-600">ng SwitchCase</h1>
 
 <div class="">
-  <button class="flex mx-auto mt-2 text-white bg-green-500 py-2 px-2 focus:outline-2 rounded" (click)="onClick('step 1')">First Button</button>
-  <button class="flex mx-auto mt-2 text-white bg-blue-500 py-2 px-2 focus:outline-2 rounded" (click)="onClick('step 2')">Second Button</button>
-  <button class="flex mx-auto mt-2 text-white bg-fuchsia-700 py-2 px-2 focus:outline-2 rounded" (click)="onClick('step 3')">Third Button</button>
+  <button class="flex mx-auto mt-2 text-white bg-green-500 py-2 px-2 focus:outline-2 rounded"
+          (click)="onClick('step 1')">First Button
+  </button>
+  <button class="flex mx-auto mt-2 text-white bg-blue-500 py-2 px-2 focus:outline-2 rounded"
+          (click)="onClick('step 2')">Second Button
+  </button>
+  <button class="flex mx-auto mt-2 text-white bg-fuchsia-700 py-2 px-2 focus:outline-2 rounded"
+          (click)="onClick('step 3')">Third Button
+  </button>
 </div>
 
 
+<!--ngIf use-->
 <div class="ml-6 text-4xl text-yellow-500" *ngIf="stepForm === 'step 1'">Step 1 Form</div>
 <div class="ml-6 text-4xl text-fuchsia-600" *ngIf="stepForm === 'step 2'">Step 2 Form</div>
 <div class="ml-6 text-4xl text-red-600" *ngIf="stepForm === 'step 3'">Step 3 Form</div>
+
+<br>
+<br>
+<br>
+
+<!--ngSwitch use-->
+
+<h1 class="ml-6 text-4xl text-blue-600">ng SwitchCase Apply</h1>
+
+<br>
+
+<div [ngSwitch]="stepForm">
+  <div class="ml-6 text-4xl text-yellow-500" *ngSwitchCase="'step 1'">Step 1 Form</div>
+  <div class="ml-6 text-4xl text-fuchsia-600" *ngSwitchCase="'step 2'">Step 2 Form</div>
+  <div class="ml-6 text-4xl text-red-600" *ngSwitchCase="'step 3'">Step 3 Form</div>
+</div>
