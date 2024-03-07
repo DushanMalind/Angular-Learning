@@ -34,12 +34,23 @@ export class EventComponent {
   }
 
   addNew(){
-    this.objArray.push({id:6,names:'Obj Post 6'});
+    //this.objArray.push({id:6,names:'Obj Post 6'});
+
+    //Dynamic Add New Post
+    this.objArray.push({ id: this.objArray.length + 1, names: 'Obj Post ' + (this.objArray.length + 1) });
   }
 
-  onDelete(post:any){
-    /*this.objArray.splice(post,1);*/
+  /*Delete Use post Attributes*/
+ /* onDelete(post:any){
+    /!*this.objArray.splice(post,1);*!/
     let index = this.objArray.indexOf(post);
+    this.objArray.splice(index,1);
+  }*/
+
+  /*Delete Use post index number*/
+  onDelete(index: number){
+    /*this.objArray.splice(post,1);*/
+    /*let index = this.objArray.indexOf(post);*/
     this.objArray.splice(index,1);
   }
 }

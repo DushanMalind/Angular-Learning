@@ -42,9 +42,9 @@
 <h1 class="ml-6 text-3xl text-green-600">Fetch Object Array Key Use</h1>
 <!--Only return Object Key Use-->
 <ul class="list-disc pl-6">
-  <li *ngFor="let post of objArray">{{ post.id }} - {{ post.names }}
+  <li *ngFor="let post of objArray; let i=index"><!--{{ i }} - --> {{ post.id }} - {{ post.names }}
     <button class="flex mx-auto text-white bg-red-500 py-2 px-2 focus:outline-2 rounded"
-            (click)="onDelete(post)">Delete</button>
+            (click)="onDelete(i)">Delete</button>
   </li>
 </ul>
 <!--*************************************************************-->
