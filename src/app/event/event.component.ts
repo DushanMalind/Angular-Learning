@@ -27,6 +27,8 @@ export class EventComponent {
     {id:5,names:'Obj Post 5'}
   ];
 
+  /*ng SwitchCase*/
+  stepForm!: string;
 
   constructor() {
     for (let i = 0; i < this.postArray.length; i++) {
@@ -52,5 +54,11 @@ export class EventComponent {
   onDelete(index: number){
     /*let index = this.objArray.indexOf(post);*/
     this.objArray.splice(index,1);
+  }
+
+
+  /*Ng SwitchCase*/
+  onClick(status: any){
+    this.stepForm = status;
   }
 }

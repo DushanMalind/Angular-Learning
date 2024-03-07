@@ -66,7 +66,7 @@
   <h1 class="ml-6 text-3xl text-red-600">NgIF Use</h1>
   <ul class="list-disc pl-6">
     <li *ngFor="let post of objArray; let i=index"><!--{{ i }} - --> {{ post.id }} - {{ post.names }}
-      <button class="flex mx-auto text-white bg-red-500 py-2 px-2 focus:outline-2 rounded"
+      <button class="flex mx-auto text-white bg-green-500 py-2 px-2 focus:outline-2 rounded"
               (click)="onDelete(i)">Delete</button>
     </li>
   </ul>
@@ -89,7 +89,7 @@
   <h1 class="ml-6 text-4xl text-yellow-500">ng-template</h1>
   <ul class="list-disc pl-6">
     <li *ngFor="let post of objArray; let i=index"><!--{{ i }} - --> {{ post.id }} - {{ post.names }}
-      <button class="flex mx-auto text-white bg-red-500 py-2 px-2 focus:outline-2 rounded"
+      <button class="flex mx-auto text-white bg-blue-500 py-2 px-2 focus:outline-2 rounded"
               (click)="onDelete(i)">Delete</button>
     </li>
   </ul>
@@ -100,3 +100,21 @@
 <ng-template class="justify-content-center items-center text-white bg-blue-500" #noData>
   <p class="text-3xl text-fuchsia-600">There is no Data fetch Ng template...</p>
 </ng-template>
+
+<br>
+<br>
+<br>
+
+<!--/////////////////////////// ng SwitchCase ////////////////////////////////////-->
+<h1 class="ml-6 text-4xl text-fuchsia-600">ng SwitchCase</h1>
+
+<div class="">
+  <button class="flex mx-auto mt-2 text-white bg-green-500 py-2 px-2 focus:outline-2 rounded" (click)="onClick('step 1')">First Button</button>
+  <button class="flex mx-auto mt-2 text-white bg-blue-500 py-2 px-2 focus:outline-2 rounded" (click)="onClick('step 2')">Second Button</button>
+  <button class="flex mx-auto mt-2 text-white bg-fuchsia-700 py-2 px-2 focus:outline-2 rounded" (click)="onClick('step 3')">Third Button</button>
+</div>
+
+
+<div class="ml-6 text-4xl text-yellow-500" *ngIf="stepForm === 'step 1'">Step 1 Form</div>
+<div class="ml-6 text-4xl text-fuchsia-600" *ngIf="stepForm === 'step 2'">Step 2 Form</div>
+<div class="ml-6 text-4xl text-red-600" *ngIf="stepForm === 'step 3'">Step 3 Form</div>
