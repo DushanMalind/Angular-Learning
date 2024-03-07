@@ -346,39 +346,39 @@
 
 <app-navbar></app-navbar>
 
-<p>{{ message }}</p>
+<!--<p>{{ message }}</p>
 
 <img class="w-max" src="{{imgUrl}}">
 
 <img class="w-max"  [src]="imgUrl">
 
-<!--Event Filtering-->
+&lt;!&ndash;Event Filtering&ndash;&gt;
 
 <button class="flex mt-4 text-white bg-blue-500 py-2 px-8 focus:outline-2 rounded"
         (click)="onClick($event)">Click Me</button>
 
 
-<!--<input placeholder="type" class="mt-6 bg-amber-300 px-8 py-4" type="text" (keyup.enter)="onkeyup($event)">-->
+&lt;!&ndash;<input placeholder="type" class="mt-6 bg-amber-300 px-8 py-4" type="text" (keyup.enter)="onkeyup($event)">&ndash;&gt;
 
 
-<!--<input placeholder="type" class="mt-6 bg-blue-500 px-8 py-4" type="text" (keyup.enter)="onkeyup(username.value)" #username>-->
+&lt;!&ndash;<input placeholder="type" class="mt-6 bg-blue-500 px-8 py-4" type="text" (keyup.enter)="onkeyup(username.value)" #username>&ndash;&gt;
 
 <br>
 
-<!--Two way Data binding-->
+&lt;!&ndash;Two way Data binding&ndash;&gt;
 <input placeholder="type" class="mt-6 bg-green-500 px-8 py-4" type="text" [(ngModel)]="userName"  (keyup.enter)=" onkeyup()">
 
-<!--/////////////////////////////////////////////-->
+&lt;!&ndash;/////////////////////////////////////////////&ndash;&gt;
 
 <br>
-<!--one way and two way Data Binding-->
+&lt;!&ndash;one way and two way Data Binding&ndash;&gt;
 
 <input placeholder="type" class="mt-6 bg-yellow-200 px-8 py-4" [value]="textValue" (keyup.enter)="onkeyup()">
 
 <br>
 
-<!--two way Data Binding-->
-<input placeholder="type" class="mt-6 bg-blue-500 px-8 py-4" [(ngModel)]="textValue"  (keyup.enter)="onkeyup()">
+&lt;!&ndash;two way Data Binding&ndash;&gt;
+<input placeholder="type" class="mt-6 bg-blue-500 px-8 py-4" [(ngModel)]="textValue"  (keyup.enter)="onkeyup()">-->
 
 
 
