@@ -7,7 +7,7 @@
 
 <br>
   <!--<li *ngFor="let post of postArray">{{ post }}</li>-->
-<ul>
+<ul class="list-disc pl-6">
   <li>{{ postArray[0] }}</li>
   <li>{{ postArray[1] }}</li>
   <li>{{ postArray[2] }}</li>
@@ -15,6 +15,9 @@
   <li>{{ postArray[4] }}</li>
 </ul>
 
+<br>
 
-
-
+<!--NgFor usage-->
+<ul class="list-disc pl-6">
+  <li *ngFor="let post of postArray">{{ post }}</li>
+</ul>
