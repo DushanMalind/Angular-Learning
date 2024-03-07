@@ -18,6 +18,16 @@
 <br>
 
 <!--NgFor usage-->
+<h1 class="ml-6 text-3xl text-green-600">NgFor usage</h1>
 <ul class="list-disc pl-6">
   <li *ngFor="let post of postArray">{{ post }}</li>
+</ul>
+
+<br>
+
+<!--Fetch Object Array NgFor usage-->
+<h1 class="ml-6 text-3xl text-blue-700">Fetch Object Array</h1>
+
+<ul class="list-disc pl-6">
+  <li *ngFor="let post of objArray">{{ post | json }}</li>
 </ul>
