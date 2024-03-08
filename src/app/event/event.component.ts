@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {JsonPipe, NgForOf, NgIf, NgSwitch, NgSwitchCase} from "@angular/common";
+import {JsonPipe, NgForOf, NgIf, NgStyle, NgSwitch, NgSwitchCase} from "@angular/common";
 
 @Component({
   selector: 'app-event',
@@ -9,7 +9,8 @@ import {JsonPipe, NgForOf, NgIf, NgSwitch, NgSwitchCase} from "@angular/common";
     JsonPipe,
     NgIf,
     NgSwitch,
-    NgSwitchCase
+    NgSwitchCase,
+    NgStyle
   ],
   templateUrl: './event.component.html',
   styleUrl: './event.component.css'
