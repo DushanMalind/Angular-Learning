@@ -32,6 +32,8 @@ export class EventComponent {
   /*ng SwitchCase*/
   stepForm!: string;
 
+  isActive:boolean=true;
+
   constructor() {
     for (let i = 0; i < this.postArray.length; i++) {
       console.log(this.postArray[i]);
