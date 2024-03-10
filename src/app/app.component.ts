@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 import {MainComponent} from "./main/main.component";
 // @ts-ignore
 import {NavbarComponent} from "./navbar/navbar.component";
 import {HomeComponent} from "./home/home.component";
 import {PostComponent} from "./post/post.component";
 import {FormsModule} from "@angular/forms";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, PostComponent, FormsModule],
+  imports: [RouterOutlet, NavbarComponent, PostComponent, FormsModule, NgIf],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -27,6 +28,7 @@ export class AppComponent {
     console.log('click');
   }
 
+  constructor(protected router: Router) {}
 /*
   onkeyup($event: any){
     /!*console.log($event);

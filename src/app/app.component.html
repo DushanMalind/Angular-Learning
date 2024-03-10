@@ -344,7 +344,7 @@
 </h1>
 -->
 
-<app-navbar></app-navbar>
+<app-navbar *ngIf="!router.url.includes('slider')"></app-navbar>
 
 <!--<p>{{ message }}</p>
 

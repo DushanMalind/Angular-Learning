@@ -33,14 +33,15 @@ export class FromComponent {
       feedback: this.feedback*/
     });
     console.log(this.userArray);
+    /*window.location.href = "/home";*/
   }
 
   onDelete(index: number){
     /*this.userArray.pop();*/
     this.userArray.splice(index, 1);
 
-
-
   }
-
+  /*if(){
+    window.location.href = "https://www.google.com";
+  }*/
 }

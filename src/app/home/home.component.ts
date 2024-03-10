@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges} from '@angular/core';
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 
 @Component({
@@ -13,8 +13,10 @@ import {RouterLink} from "@angular/router";
 })
 export class HomeComponent /*implements OnChanges*/{
   parentMessage: string = 'Initial message Coming from parent';
-
-
+  constructor(private router: Router) {}
+  onClick(){
+    this.router.navigate(['/slider']);
+  }
 
   /** Emitting event data **/
  /* @Output() dataEmitter: EventEmitter<any> = new EventEmitter();
