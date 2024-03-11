@@ -40,7 +40,7 @@
   </thead>
   <tbody>
   <tr class="bg-white border-b border-blue-500" *ngFor="let user of userArray; let index=index">
-    <td class="py-2 px-4">{{ index +1 }}</td>
+    <td class="py-2 px-4">{{ index+1 }}</td>
     <td class="py-2 px-4">{{ user.name }}</td>
     <td class="py-2 px-4">{{ user.email }}</td>
     <td class="py-2 px-4">{{ user.feedback }}</td>
@@ -51,75 +51,4 @@
 
 <ng-template #noData>No Data</ng-template>
 <br>
-
-
-
-<!--<form #feedbackForm="ngForm" (ngSubmit)="onSubmit()">
-  <div class="max-w-md mx-auto mt-20 p-6 bg-white border rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Feedback Form</h2>
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="name">
-        Name:
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="name"
-        type="text"
-        placeholder="Enter your name"
-        [(ngModel)]="name"
-        name="name"
-        #nameInput="ngModel"
-        required
-      >
-      <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="text-red-500">
-        <span *ngIf="nameInput.errors.required">Name is required.</span>
-      </div>
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="email">
-        Email:
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="email"
-        type="email"
-        placeholder="Enter your email"
-        [(ngModel)]="email"
-        name="email"
-        #emailInput="ngModel"
-        required
-        email
-      >
-      <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="text-red-500">
-        <span *ngIf="emailInput.errors.required">Email is required.</span>
-        <span *ngIf="emailInput.errors.email">Please enter a valid email address.</span>
-      </div>
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="feedback">
-        Feedback:
-      </label>
-      <textarea
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="feedback"
-        rows="5"
-        placeholder="Enter your feedback"
-        [(ngModel)]="feedback"
-        name="feedback"
-        #feedbackInput="ngModel"
-        required
-      ></textarea>
-      <div *ngIf="feedbackInput.invalid && (feedbackInput.dirty || feedbackInput.touched)" class="text-red-500">
-        <span *ngIf="feedbackInput.errors.required">Feedback is required.</span>
-      </div>
-    </div>
-    <button
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-      type="submit"
-      [disabled]="feedbackForm.invalid"
-    >
-      Submit
-    </button>
-  </div>
-</form>-->
 

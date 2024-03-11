@@ -44,4 +44,5 @@ export class FromComponent {
   /*if(){
     window.location.href = "https://www.google.com";
   }*/
+
 }
