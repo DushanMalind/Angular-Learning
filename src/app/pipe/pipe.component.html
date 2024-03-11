@@ -1,107 +1,108 @@
 <p>pipe works!</p>
 <div class="container">
-<br>
+  <br>
 
-<h1 class="ml-6 text-4xl text-blue-600">UpperCase</h1>
-<br>
+  <h1 class="ml-6 text-4xl text-blue-600">UpperCase</h1>
+  <br>
 
-<h1>{{ title }}</h1>
-<h1>{{ title | uppercase }}</h1>
-
-
-<br>
-
-<h1 class="ml-6 text-4xl text-blue-600">LowerCase</h1>
-<br>
-
-<h1>{{ title }}</h1>
-<h1>{{ title | lowercase }}</h1>
+  <h1>{{ title }}</h1>
+  <h1>{{ title | uppercase }}</h1>
 
 
-<br>
+  <br>
 
-<h1 class="ml-6 text-4xl text-blue-600">Number Pipe</h1>
-<br>
+  <h1 class="ml-6 text-4xl text-blue-600">LowerCase</h1>
+  <br>
 
-<h1>{{ count }}</h1>
-<h1>{{ count | number }}</h1>
-
-
-<br>
-
-<h1 class="ml-6 text-4xl text-blue-600">Decimal Pipe</h1>
-<br>
-
-<h1>{{ dcValue }}</h1>
-<h1>{{ dcValue | number }}</h1>
-<h1>{{ dcValue | number: '1.2-2' }}</h1>
-<br>
-
-<h1 class="ml-6 text-4xl text-blue-600">Currency Pipe</h1>
-<br>
-
-<h1>{{ price }}</h1>
-<h1>{{ price | currency: "LKR" }}</h1>
-<h1>{{ price | currency: "LKR":false: "2.1-1" }}</h1>
+  <h1>{{ title }}</h1>
+  <h1>{{ title | lowercase }}</h1>
 
 
-<br>
+  <br>
 
-<h1 class="ml-6 text-4xl text-blue-600">Data Pipe</h1>
-<br>
+  <h1 class="ml-6 text-4xl text-blue-600">Number Pipe</h1>
+  <br>
 
-<h1>{{ today }}</h1>
-<h1>{{ today | date }}</h1>
-<h1>{{ today | date: 'short' }}</h1>
-<h1>{{ today | date: 'shortDate' }}</h1>
-<h1>{{ today | date: 'shortTime' }}</h1>
-
-<!--Angular Data pipe Search  https://angular.io/api/common/DatePipe-->
-
-<br>
-
-<h1 class="ml-6 text-4xl text-blue-600">Json Pipe</h1>
-<br>
-
-<p>{{ postObj }}</p>
-<p>{{ postObj | json }}</p>
-<p *ngFor="let keyValuePair of postObj | keyvalue">{{ keyValuePair.key }}: {{ keyValuePair.value }}</p>
-<br>
-<p *ngFor="let keyValuePair of postObj | keyvalue">
-  {{ keyValuePair.key }}:
-  <ng-container *ngIf="keyValuePair.key !== 'date'; else dateTemplate">{{ keyValuePair.value }}</ng-container>
-  <ng-template #dateTemplate>{{ keyValuePair.value | date: 'short' }}</ng-template>
-</p>
+  <h1>{{ count }}</h1>
+  <h1>{{ count | number }}</h1>
 
 
-<br>
+  <br>
 
-<h1 class="ml-6 text-4xl text-blue-600">Percent Pipe</h1>
-<br>
+  <h1 class="ml-6 text-4xl text-blue-600">Decimal Pipe</h1>
+  <br>
 
-<h1>{{ 0.587 | percent }}</h1>
-<h1>{{ 0.587 | percent : '1.1-1'}}</h1>
+  <h1>{{ dcValue }}</h1>
+  <h1>{{ dcValue | number }}</h1>
+  <h1>{{ dcValue | number: '1.2-2' }}</h1>
+  <br>
+
+  <h1 class="ml-6 text-4xl text-blue-600">Currency Pipe</h1>
+  <br>
+
+  <h1>{{ price }}</h1>
+  <h1>{{ price | currency: "LKR" }}</h1>
+  <h1>{{ price | currency: "LKR":false: "2.1-1" }}</h1>
 
 
-<br>
+  <br>
 
-<h1 class="ml-6 text-4xl text-blue-600">Slice Pipe</h1>
-<br>
+  <h1 class="ml-6 text-4xl text-blue-600">Data Pipe</h1>
+  <br>
 
-<h1>{{ postArray }}</h1>
-<h1>{{ postArray | slice: 0:3 }}</h1>
+  <h1>{{ today }}</h1>
+  <h1>{{ today | date }}</h1>
+  <h1>{{ today | date: 'short' }}</h1>
+  <h1>{{ today | date: 'shortDate' }}</h1>
+  <h1>{{ today | date: 'shortTime' }}</h1>
 
-<br>
-<br>
+  <!--Angular Data pipe Search  https://angular.io/api/common/DatePipe-->
 
-<br>
+  <br>
 
-<h1 class="ml-6 text-4xl text-red-600">Custom Pipe I</h1>
-<br>
+  <h1 class="ml-6 text-4xl text-blue-600">Json Pipe</h1>
+  <br>
 
-<h1>{{ userDetails | json}}</h1>
-<h1>{{ userDetails.email | append}}</h1>
-<h1>{{ userDetails.email | append:userDetails}}</h1>
+  <p>{{ postObj }}</p>
+  <p>{{ postObj | json }}</p>
+  <p *ngFor="let keyValuePair of postObj | keyvalue">{{ keyValuePair.key }}: {{ keyValuePair.value }}</p>
+  <br>
+  <p *ngFor="let keyValuePair of postObj | keyvalue">
+    {{ keyValuePair.key }}:
+    <ng-container *ngIf="keyValuePair.key !== 'date'; else dateTemplate">{{ keyValuePair.value }}</ng-container>
+    <ng-template #dateTemplate>{{ keyValuePair.value | date: 'short' }}</ng-template>
+  </p>
+
+
+  <br>
+
+  <h1 class="ml-6 text-4xl text-blue-600">Percent Pipe</h1>
+  <br>
+
+  <h1>{{ 0.587 | percent }}</h1>
+  <h1>{{ 0.587 | percent : '1.1-1' }}</h1>
+
+
+  <br>
+
+  <h1 class="ml-6 text-4xl text-blue-600">Slice Pipe</h1>
+  <br>
+
+  <h1>{{ postArray }}</h1>
+  <h1>{{ postArray | slice: 0:3 }}</h1>
+
+  <br>
+  <br>
+
+  <br>
+
+  <h1 class="ml-6 text-4xl text-red-600">Custom Pipe I</h1>
+  <br>
+
+  <h1>{{ userDetails | json }}</h1>
+  <h1>{{ userDetails.email | append }}</h1>
+
+  <h1>{{ userDetails.email | append:userDetails }}</h1>
 
 </div>
 

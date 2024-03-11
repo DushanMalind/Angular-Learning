@@ -1,4 +1,4 @@
-import { Pipe,PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   standalone: true,
@@ -25,5 +25,10 @@ export class AppendPipe implements PipeTransform{
 
     return result;
   }
+
+/*  transform(email: string, name: string, age: number): string {
+
+    return `Customer Email: ${email}, Customer Name: ${name || 'N/A'}, Customer Age: ${age || 'N/A'}`;
+  }*/
 
 }
