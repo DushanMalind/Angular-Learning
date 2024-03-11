@@ -15,6 +15,7 @@ export const routes: Routes = [
   { path: 'about', 'title': "About", component: AboutComponent },
   { path: 'contact', 'title': "contact", component: PostComponent },
   { path: 'event', 'title': "Event", component: EventComponent },
+  { path: 'from', 'title': "From", component: FromComponent },
   { path: 'pipe', 'title': "Pipe", component: PipeComponent },
   { path: 'slider', 'title': "From", component: SliderNavbarComponent,
     children: [
