@@ -6,7 +6,7 @@ import {
   JsonPipe,
   KeyValuePipe,
   LowerCasePipe,
-  NgForOf, NgIf, PercentPipe,
+  NgForOf, NgIf, PercentPipe, SlicePipe,
   UpperCasePipe
 } from "@angular/common";
 
@@ -23,7 +23,8 @@ import {
     NgForOf,
     KeyValuePipe,
     NgIf,
-    PercentPipe
+    PercentPipe,
+    SlicePipe
   ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.css'
@@ -45,6 +46,8 @@ export class PipeComponent {
     price: 2500,
     date: new Date()
   }
+
+  postArray:Array<string>=['Post 1','Post 2','Post 3','Post 4','Post 5'];
 
 
 
