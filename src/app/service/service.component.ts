@@ -8,14 +8,21 @@ import {NgForOf} from "@angular/common";
     NgForOf
   ],
   templateUrl: './service.component.html',
-  styleUrl: './service.component.css'
+  styleUrl: './service.component.css',
+  providers: [PostService]
 })
 export class ServiceComponent implements OnInit{
 
   posts:Array<any>;
 
-  constructor() {
+ /* constructor() {
     let postService = new PostService();
+    this.posts=postService.postsList;
+
+  }
+*/
+  //Dependency Injection
+  constructor(private postService:PostService) {
     this.posts=postService.postsList;
 
   }
