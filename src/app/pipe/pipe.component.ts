@@ -6,7 +6,7 @@ import {
   JsonPipe,
   KeyValuePipe,
   LowerCasePipe,
-  NgForOf, NgIf,
+  NgForOf, NgIf, PercentPipe,
   UpperCasePipe
 } from "@angular/common";
 
@@ -22,7 +22,8 @@ import {
     JsonPipe,
     NgForOf,
     KeyValuePipe,
-    NgIf
+    NgIf,
+    PercentPipe
   ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.css'
