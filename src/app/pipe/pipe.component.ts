@@ -9,6 +9,7 @@ import {
   NgForOf, NgIf, PercentPipe, SlicePipe,
   UpperCasePipe
 } from "@angular/common";
+import {AppendPipe} from "./customPipe/append.pipe";
 
 @Component({
   selector: 'app-pipe',
@@ -24,7 +25,8 @@ import {
     KeyValuePipe,
     NgIf,
     PercentPipe,
-    SlicePipe
+    SlicePipe,
+    AppendPipe
   ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.css'
@@ -48,6 +50,13 @@ export class PipeComponent {
   }
 
   postArray:Array<string>=['Post 1','Post 2','Post 3','Post 4','Post 5'];
+
+  userDetails={
+    name:'John Doe',
+    age:25,
+    email:'adv@gmail.com'
+  }
+
 
 
 
