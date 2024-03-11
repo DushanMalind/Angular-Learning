@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {FormsModule, NgForm} from "@angular/forms";
-import {NgForOf, NgIf} from "@angular/common";
+import {FormControl, FormsModule, NgForm, NgModel} from "@angular/forms";
+import {NgClass, NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-from',
@@ -8,7 +8,8 @@ import {NgForOf, NgIf} from "@angular/common";
   imports: [
     FormsModule,
     NgForOf,
-    NgIf
+    NgIf,
+    NgClass
   ],
   templateUrl: './from.component.html',
   styleUrl: './from.component.css'
@@ -49,7 +50,11 @@ export class FromComponent {
 /*ngForm*/
 
   onSubmit(f: NgForm){
+    console.log(f.value);
+  }
 
+  getValue(f: NgModel){
+    console.log(f);
   }
 
 }
