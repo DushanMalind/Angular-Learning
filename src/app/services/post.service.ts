@@ -22,7 +22,8 @@ export class PostService{
     },
     {
       title: "Post 4",
-      content: "This is the fourth post"
+      content: "This is the fourth post",
+      date: new Date()
     }
 
   ];
