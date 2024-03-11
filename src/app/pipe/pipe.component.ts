@@ -10,6 +10,7 @@ import {
   UpperCasePipe
 } from "@angular/common";
 import {AppendPipe} from "./customPipe/append.pipe";
+import {SummaryPipe} from "./summary.pipe";
 
 @Component({
   selector: 'app-pipe',
@@ -26,7 +27,8 @@ import {AppendPipe} from "./customPipe/append.pipe";
     NgIf,
     PercentPipe,
     SlicePipe,
-    AppendPipe
+    AppendPipe,
+    SummaryPipe
   ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.css'
@@ -58,7 +60,10 @@ export class PipeComponent {
   }
 
 
-
+  dummyText:string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra ' +
+    'nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend ' +
+    'tristique, tortor mauris molestie elit, et luctus enim justo non justo. Quisque tincidunt, enim et aliquam ultrices,' +
+    ' nunc odio ullamcorper sapien, ac accumsan arcu neque sit amet nisl.';
 
   constructor() {
   }
