@@ -9,6 +9,7 @@ import {SliderNavbarComponent} from "./slider-navbar/slider-navbar.component";
 import {DashboardComponent} from "./sliderNavComponent/dashboard/dashboard.component";
 import {KanbanComponent} from "./sliderNavComponent/kanban/kanban.component";
 import {PipeComponent} from "./pipe/pipe.component";
+import {ServiceComponent} from "./service/service.component";
 
 export const routes: Routes = [
   { path: 'home', 'title': "Home", component: HomeComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'event', 'title': "Event", component: EventComponent },
   { path: 'from', 'title': "From", component: FromComponent },
   { path: 'pipe', 'title': "Pipe", component: PipeComponent },
+  { path: 'service', 'title': "Service", component: ServiceComponent },
   { path: 'slider', 'title': "From", component: SliderNavbarComponent,
     children: [
       {path: 'dashboard', data: {title: 'Dashboard'}, component: DashboardComponent},
