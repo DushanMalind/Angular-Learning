@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {DecimalPipe, LowerCasePipe, UpperCasePipe} from "@angular/common";
+import {CurrencyPipe, DecimalPipe, LowerCasePipe, UpperCasePipe} from "@angular/common";
 
 @Component({
   selector: 'app-pipe',
@@ -7,7 +7,8 @@ import {DecimalPipe, LowerCasePipe, UpperCasePipe} from "@angular/common";
   imports: [
     UpperCasePipe,
     LowerCasePipe,
-    DecimalPipe
+    DecimalPipe,
+    CurrencyPipe
   ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.css'
@@ -18,6 +19,8 @@ export class PipeComponent {
   count: number=2585464;
 
   dcValue: number=2.1254;
+
+  price: number= 2524.57885;
 
   constructor() {
   }
