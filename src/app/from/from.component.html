@@ -59,7 +59,7 @@
 <div class="container">
 
 
-  <form #f='ngForm' (submit)="onSubmit(f)" class="max-w-md mx-auto mt-20 p-8  bg-white border rounded-lg shadow-lg">
+  <form #f='ngForm' (ngSubmit)="onSubmit(f)" class="max-w-md mx-auto mt-20 p-8  bg-white border rounded-lg shadow-lg">
     <div class="relative z-0 w-full mb-5 group">
       <input type="email" name="floating_email" id="floating_email" ngModel #floating_email='ngModel' (change)="getValue(floating_email)"  required
              [ngClass]="{'is-invalid':floating_email.touched && floating_email.invalid}" minlength="5" maxlength="50" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
@@ -126,7 +126,8 @@
     </div>
     <button type="submit"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
-            font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+            font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700
+            dark:focus:ring-blue-800" [disabled]="f.invalid" >Submit</button>
   </form>
 
 </div>
