@@ -29,6 +29,15 @@ export class ServiceComponent implements OnInit{
 
   }
 
+  addNewData(){
+    let newPost =
+      {
+        //Dynamic Add New Post
+        title: 'Post ' + (this.posts.length + 1)+ ' ', content: 'This is the new post' + ' ' +(this.posts.length + 1)
+
+      };
+    this.postService.addPost(newPost);
+  }
   ngOnInit(): void {
   }
 

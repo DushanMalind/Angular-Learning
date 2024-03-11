@@ -1,5 +1,10 @@
+import {Injectable} from "@angular/core";
 
 export class PostService{
+
+ /* @Injectable({
+    providedIn: 'root'
+  })*/
 
   postsList:Array<any>=[
 {
@@ -21,6 +26,12 @@ export class PostService{
     }
 
   ];
+
+
+  addPost(data: { title: string }){
+    this.postsList.push(data);
+  }
+
   constructor() { }
 
 }

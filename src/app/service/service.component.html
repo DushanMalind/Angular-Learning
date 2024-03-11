@@ -1,5 +1,8 @@
 <p>service works!</p>
 <br>
+<button (click)="addNewData()" class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New
+  Data
+</button>
 
 <ul class="list-disc pl-6">
     <li *ngFor="let post of posts">{{ post.title }} - {{ post.content }}</li>
