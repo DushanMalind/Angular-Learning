@@ -65,6 +65,16 @@
 
 <p>{{ postObj }}</p>
 <p>{{ postObj | json }}</p>
+<p *ngFor="let keyValuePair of postObj | keyvalue">{{ keyValuePair.key }}: {{ keyValuePair.value }}</p>
+<br>
+<p *ngFor="let keyValuePair of postObj | keyvalue">
+  {{ keyValuePair.key }}:
+  <ng-container *ngIf="keyValuePair.key !== 'date'; else dateTemplate">{{ keyValuePair.value }}</ng-container>
+  <ng-template #dateTemplate>{{ keyValuePair.value | date: 'short' }}</ng-template>
+</p>
+
+
+
 
 
 

@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
-import {CurrencyPipe, DatePipe, DecimalPipe, JsonPipe, LowerCasePipe, UpperCasePipe} from "@angular/common";
+import {
+  CurrencyPipe,
+  DatePipe,
+  DecimalPipe,
+  JsonPipe,
+  KeyValuePipe,
+  LowerCasePipe,
+  NgForOf, NgIf,
+  UpperCasePipe
+} from "@angular/common";
 
 @Component({
   selector: 'app-pipe',
@@ -10,7 +19,10 @@ import {CurrencyPipe, DatePipe, DecimalPipe, JsonPipe, LowerCasePipe, UpperCaseP
     DecimalPipe,
     CurrencyPipe,
     DatePipe,
-    JsonPipe
+    JsonPipe,
+    NgForOf,
+    KeyValuePipe,
+    NgIf
   ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.css'
@@ -32,6 +44,8 @@ export class PipeComponent {
     price: 2500,
     date: new Date()
   }
+
+
 
   constructor() {
   }
