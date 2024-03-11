@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, NgForm} from "@angular/forms";
 import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
@@ -44,5 +44,12 @@ export class FromComponent {
   /*if(){
     window.location.href = "https://www.google.com";
   }*/
+
+
+/*ngForm*/
+
+  onSubmit(f: NgForm){
+
+  }
 
 }
