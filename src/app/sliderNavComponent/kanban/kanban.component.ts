@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-kanban',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './kanban.component.html',
   styleUrl: './kanban.component.css'
 })
-export class KanbanComponent {
-
+export class KanbanComponent implements OnInit {
+  constructor() { }
+  ngOnInit(): void {
+    console.log('KanbanComponent initialized');
+  }
 }
