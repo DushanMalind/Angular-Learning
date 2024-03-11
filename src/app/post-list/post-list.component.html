@@ -1,1 +1,13 @@
-<p>post-list works!</p>
+<br>
+<div class="container">
+  <p>post-list works!</p>
+
+  <br>
+
+  <ul class="list-disc pl-6">
+    <li *ngFor="let post of postList">{{ post.title }} - {{ post.content }}</li>
+
+  </ul>
+</div>
+
+

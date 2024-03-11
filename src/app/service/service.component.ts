@@ -1,11 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import { PostService } from '../services/post.service'
 import {NgForOf} from "@angular/common";
+import {PostListComponent} from "../post-list/post-list.component";
 @Component({
   selector: 'app-service',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    PostListComponent
   ],
   templateUrl: './service.component.html',
   styleUrl: './service.component.css',
