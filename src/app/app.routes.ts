@@ -10,6 +10,7 @@ import {DashboardComponent} from "./sliderNavComponent/dashboard/dashboard.compo
 import {KanbanComponent} from "./sliderNavComponent/kanban/kanban.component";
 import {PipeComponent} from "./pipe/pipe.component";
 import {ServiceComponent} from "./service/service.component";
+import {LazyLoadingComponent} from "./lazy-loading/lazy-loading.component";
 
 export const routes: Routes = [
   { path: 'home', 'title': "Home", component: HomeComponent },
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path: 'from', 'title': "From", component: FromComponent },
   { path: 'pipe', 'title': "Pipe", component: PipeComponent },
   { path: 'service', 'title': "Service", component: ServiceComponent },
+  { path: 'lazy', 'title': "Lazy", component: LazyLoadingComponent },
   { path: 'slider', 'title': "From", component: SliderNavbarComponent,
     children: [
       {path: 'dashboard', data: {title: 'Dashboard'}, component: DashboardComponent},
