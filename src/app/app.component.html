@@ -381,8 +381,33 @@
 <input placeholder="type" class="mt-6 bg-blue-500 px-8 py-4" [(ngModel)]="textValue"  (keyup.enter)="onkeyup()">-->
 
 
+<!--waiting 3 second-->
 
-<router-outlet></router-outlet>
+<!--@defer (on timer(3000ms)){
+  <router-outlet></router-outlet>
+}-->
+
+<!--///////////////////////////////////////////////////////-->
+
+<!--Button Click Data Add-->
+
+<!--<button #load class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New Data
+</button>
+
+@defer (on interaction(load)){
+  <router-outlet></router-outlet>
+}-->
+
+<!--///////////////////////////////////////////////////////-->
+
+<button #load class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New Data
+</button>
+
+@defer (on interaction(load)){
+  <router-outlet></router-outlet>
+}
+
+
 
 <!--<app-main></app-main>-->
 
