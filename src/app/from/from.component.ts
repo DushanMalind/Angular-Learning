@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormsModule, NgForm, NgModel} from "@angular/forms";
+import {FormControl, FormGroup, FormsModule, NgForm, NgModel, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NgClass, NgForOf, NgIf} from "@angular/common";
 
 @Component({
@@ -9,7 +9,8 @@ import {NgClass, NgForOf, NgIf} from "@angular/common";
     FormsModule,
     NgForOf,
     NgIf,
-    NgClass
+    NgClass,
+    ReactiveFormsModule
   ],
   templateUrl: './from.component.html',
   styleUrl: './from.component.css'
@@ -21,7 +22,45 @@ export class FromComponent {
 
   userArray: Array<any> = [];
 
+
+  form:any;
+  passwordsRegx:string = "^[a-zA-Z0-9]{8,}$";
+
   constructor() {
+    this.form = new FormGroup({
+      floating_email: new FormControl('',
+        [Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(10)
+      ]),
+      floating_password: new FormControl('',[
+        Validators.required,
+        Validators.pattern(this.passwordsRegx)
+      ]),
+      repeat_password: new FormControl(''),
+      floating_first_name: new FormControl(''),
+      floating_last_name: new FormControl(''),
+    });
+  }
+
+  get Email(){
+    return this.form.get('floating_email');
+  }
+
+  get Password(){
+    return this.form.get('floating_password');
+  }
+
+  get RepeatPassword(){
+    return this.form.get('repeat_password');
+  }
+
+  get FirstName(){
+    return this.form.get('floating_first_name');
+  }
+
+  get LastName(){
+    return this.form.get('floating_last_name');
   }
 
   onClick(){

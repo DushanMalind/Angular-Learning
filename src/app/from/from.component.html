@@ -132,25 +132,27 @@
 
   <!--******************************************************************-->
 
-  <form  class="max-w-md mx-auto mt-20 p-8  bg-white border rounded-lg shadow-lg">
+  <form [formGroup]="form"  class="max-w-md mx-auto mt-20 p-8  bg-white border rounded-lg shadow-lg">
     <div class="relative z-0 w-full mb-5 group">
-      <input type="email" name="floating_email" id="floating_email2"    required
+      <input type="email" name="floating_email" id="floating_email2"  formControlName="floating_email"   required
             pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
              class="shadow leading-tight focus:outline focus:shadow-amber-300 block py-2.5 px-0 w-full text-sm text-gray-900
              bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
              focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" "  >
 
-      <!--<div *ngIf="floating_email.errors">
-        <div class="alert alert-danger" *ngIf="floating_email.touched && floating_email.invalid">Email Is Required</div>
-      </div>-->
-      <!--<div *ngIf="floating_email.errors.minlength">
-        <div class="alert alert-danger" *ngIf="floating_email.touched && floating_email.invalid">Email Is Required 5 characters</div>
-      </div>-->
+
+        <div class="alert alert-danger" *ngIf="Email.touched && Email.invalid">
+          <div *ngIf="Email.errors">The Email Is Required</div>
+        <!--  <div *ngIf="Email.errors?.required">The Email Not</div>-->
+        </div>
+
+
+
 
       <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
     </div>
     <div class="relative z-0 w-full mb-5 group">
-      <input type="password" name="floating_password" id="floating_password2"
+      <input type="password" name="floating_password" id="floating_password2"  formControlName="floating_password"
              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
              class="shadow leading-tight focus:outline focus:shadow-amber-300 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
 
@@ -159,7 +161,7 @@
       <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
     </div>
     <div class="relative z-0 w-full mb-5 group">
-      <input type="password" name="repeat_password" id="floating_repeat_password2"
+      <input type="password" name="repeat_password" id="floating_repeat_password2"  formControlName="repeat_password"
              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
              class="shadow leading-tight focus:outline focus:shadow-amber-300 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
 
@@ -167,7 +169,7 @@
     </div>
     <div class="grid md:grid-cols-2 md:gap-6">
       <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="floating_first_name" id="floating_first_name2"
+        <input type="text" name="floating_first_name" id="floating_first_name2"  formControlName="floating_first_name"
                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none
                focus:ring-0 focus:border-blue-600 peer" placeholder=" " required minlength="5" maxlength="10" />
@@ -176,7 +178,7 @@
         <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
       </div>
       <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="floating_last_name" id="floating_last_name2"
+        <input type="text" name="floating_last_name" id="floating_last_name2"  formControlName="floating_last_name"
                class="shadow leading-tight focus:outline focus:shadow-amber-300 block py-2.5 px-0 w-full text-sm text-gray-900
                bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600
                dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required minlength="5" maxlength="10"  />
