@@ -17,6 +17,14 @@ import {NgIf} from "@angular/common";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  isLoading=false;
+
+  showPosts(){
+    this.isLoading = !this.isLoading;
+
+  }
+
 /*  title = 'My First Angular App';
   parentMessage = "message from parent";*/
 
