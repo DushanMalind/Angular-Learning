@@ -37,9 +37,22 @@ export class FromComponent {
         Validators.required,
         Validators.pattern(this.passwordsRegx)
       ]),
-      repeat_password: new FormControl(''),
-      floating_first_name: new FormControl(''),
-      floating_last_name: new FormControl(''),
+      repeat_password: new FormControl('',[
+        Validators.required,
+        Validators.pattern(this.passwordsRegx)
+      ]),
+      floating_first_name: new FormControl('',[
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(10)
+
+      ]),
+      floating_last_name: new FormControl('',[
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(10)
+
+      ]),
     });
   }
 
