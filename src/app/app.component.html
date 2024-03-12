@@ -400,10 +400,24 @@
 
 <!--///////////////////////////////////////////////////////-->
 
+<!--Button Click Data Add Hover-->
+<!--
 <button #load class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New Data
 </button>
 
 @defer (on hover(load)){
+  <router-outlet></router-outlet>
+}
+-->
+
+
+<!--///////////////////////////////////////////////////////-->
+
+<!--Button Click Data Add viewport-->
+<button #load class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New Data
+</button>
+
+@defer (on viewport(load)){
   <router-outlet></router-outlet>
 }
 
