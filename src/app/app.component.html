@@ -480,6 +480,18 @@
 
 <!--////////////// On Timer Use ///////////////////////-->
 
+<!--@defer (on timer(3000ms)){
+  <router-outlet></router-outlet>
+} @placeholder {
+  <h2 class="text-blue-600 justify-content-center items-center text-center font-semibold">Please Wait...</h2>
+  <app-post-loard></app-post-loard>
+} @error {
+  <div class="flex items-center justify-content-center h-screen">
+    <h2 class="text-blue-600 font-semibold">Data Load Is Failed...</h2>
+  </div>
+}-->
+
+
 @defer (on timer(3000ms)){
   <router-outlet></router-outlet>
 } @placeholder {

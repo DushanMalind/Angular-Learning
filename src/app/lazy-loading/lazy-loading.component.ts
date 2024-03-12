@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
+import {PostLoardComponent} from "./postLoard/post-loard/post-loard.component";
+import {RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-lazy-loading',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    PostLoardComponent,
+    RouterOutlet
   ],
   templateUrl: './lazy-loading.component.html',
   styleUrl: './lazy-loading.component.css'
