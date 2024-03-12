@@ -453,15 +453,27 @@
 <!--<button (click)="showPosts()"  class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New Data
 </button>-->
 
-@defer{
+<!--@defer{
   <router-outlet></router-outlet>
 } @placeholder (minimum 3000ms) {
   <div class="flex items-center justify-content-center h-screen">
     <h2 class="text-blue-600 font-semibold">Please Wait...</h2>
   </div>
+}-->
+
+
+<!--///////////////////////////////////////////////////////-->
+
+<!--Button Click Data Add LoadingCard-->
+<!--<button (click)="showPosts()"  class="flex mx-auto text-green-600 bg-amber-300 py-2 px-8 focus:outline-2 rounded">Add New Data
+</button>-->
+
+@defer{
+  <router-outlet></router-outlet>
+} @placeholder (minimum 3000ms) {
+  <h2 class="text-blue-600 justify-content-center items-center text-center font-semibold">Please Wait...</h2>
+  <app-post-loard></app-post-loard>
 }
-
-
 
 <!--<app-main></app-main>-->
 

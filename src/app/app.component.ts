@@ -7,11 +7,12 @@ import {HomeComponent} from "./home/home.component";
 import {PostComponent} from "./post/post.component";
 import {FormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import {PostLoardComponent} from "./lazy-loading/postLoard/post-loard/post-loard.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, PostComponent, FormsModule, NgIf],
+  imports: [RouterOutlet, NavbarComponent, PostComponent, FormsModule, NgIf, PostLoardComponent],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
