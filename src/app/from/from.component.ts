@@ -31,7 +31,7 @@ export class FromComponent {
       floating_email: new FormControl('',
         [Validators.required,
           Validators.minLength(5),
-          Validators.maxLength(10)
+          Validators.maxLength(20)
       ]),
       floating_password: new FormControl('',[
         Validators.required,
@@ -74,6 +74,12 @@ export class FromComponent {
 
   get LastName(){
     return this.form.get('floating_last_name');
+  }
+
+
+  onSubmit2(){
+    this.form.value;
+    console.log(this.form.value);
   }
 
   onClick(){
