@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {RouterLink, RouterOutlet} from "@angular/router";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-slider-navbar',
   standalone: true,
   imports: [
     RouterLink,
-    RouterOutlet
+    RouterOutlet,
+    RouterLinkActive
   ],
   templateUrl: './slider-navbar.component.html',
   styleUrl: './slider-navbar.component.css'
